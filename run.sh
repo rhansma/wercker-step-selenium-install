@@ -1,4 +1,5 @@
-VERSION=2.37.0
+SHORT_VERSION=2.45
+VERSION=2.45.0
 JAR_FILE=selenium-server-standalone-$VERSION.jar
 CACHE_DIR="${WERCKER_CACHE_DIR}/wercker/selenium-server"
 
@@ -8,7 +9,7 @@ cd $CACHE_DIR
 
 if [[ ! -f "${CACHE_DIR}/${JAR_FILE}" ]]; then
   # Download Selenium Standalone Server
-  curl -O http://selenium.googlecode.com/files/$JAR_FILE
+  wget http://selenium-release.storage.googleapis.com/$SHORT_VERSION/selenium-server-standalone-$VERSION.jar
 fi
 
 # Start Selenium and wait for port 4444 to become available
