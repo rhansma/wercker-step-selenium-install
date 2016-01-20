@@ -1,5 +1,5 @@
-SHORT_VERSION=2.48
-VERSION=2.48.2
+SHORT_VERSION=2.49
+VERSION=2.49.0
 JAR_FILE=selenium-server-standalone-$VERSION.jar
 CACHE_DIR="${WERCKER_CACHE_DIR}/wercker/selenium-server"
 
