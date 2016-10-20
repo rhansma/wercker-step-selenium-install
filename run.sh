@@ -1,5 +1,5 @@
-SHORT_VERSION=2.49
-VERSION=2.49.0
+SHORT_VERSION=2.53
+VERSION=2.53.1
 JAR_FILE=selenium-server-standalone-$VERSION.jar
 CACHE_DIR="${WERCKER_CACHE_DIR}/wercker/selenium-server"
 
@@ -13,4 +13,4 @@ if [[ ! -f "${CACHE_DIR}/${JAR_FILE}" ]]; then
 fi
 
 # Start Selenium and wait for port 4444 to become available
-nohup java -jar $JAR_FILE & while ! nc -vz localhost 4444; do sleep 1; done
+nohup java -jar $JAR_FILE - Dwebdriver.chrome.driver='/opt/drivers/chromedriver' & while ! nc -vz localhost 4444; do sleep 1; done
